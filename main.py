@@ -48,6 +48,8 @@ def get_numbers_ticket(min, max, quantity):
 
     return lottery_ticket
 # Тестовые запуски
+lottery_numbers = get_numbers_ticket(1, 49, 6)
+print("Ваші лотерейні числа:", lottery_numbers)
 # print(get_numbers_ticket(1, 100, 6))
 # print(get_numbers_ticket(-1, 10000, 6))
 # print(get_numbers_ticket(90, 100, 6))
@@ -68,10 +70,8 @@ def normalize_phone(phone_number):
             phone_number = "+" + phone_number
         else:
             phone_number = "+38" + phone_number
-    
     return phone_number
-
-
+# Тестовые запуски
 raw_numbers = [
     "067\\t123 4567",
     "(095) 234-5678\\n",
@@ -83,7 +83,6 @@ raw_numbers = [
     "38050-111-22-22",
     "38050 111 22 11   ",
 ]
-
 sanitized_numbers = [normalize_phone(num) for num in raw_numbers]
 print("Нормалізовані номери телефонів для SMS-розсилки:", sanitized_numbers)
 
