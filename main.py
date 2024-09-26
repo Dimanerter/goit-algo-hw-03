@@ -37,7 +37,7 @@ def get_numbers_ticket(min, max, quantity):
     # Создание пустого списка для значений
     lottery_ticket = []
     # Проверка условий 
-    if min >= 1 and max <= 1000 and min <= quantity <= max:
+    if min >= 1 and max <= 1000 and min < max:
        # Создание цикла для заполнения списка всеми возможными числами
         while min < max:
             lottery_ticket.append(min)
@@ -50,7 +50,7 @@ def get_numbers_ticket(min, max, quantity):
 # Тестовые запуски
 lottery_numbers = get_numbers_ticket(1, 49, 6)
 print("Ваші лотерейні числа:", lottery_numbers)
-# print(get_numbers_ticket(1, 100, 6))
+# print(get_numbers_ticket(10, 4, 2))
 # print(get_numbers_ticket(-1, 10000, 6))
 # print(get_numbers_ticket(90, 100, 6))
 
