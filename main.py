@@ -57,18 +57,24 @@ print("Ваші лотерейні числа:", lottery_numbers)
 #---------------------------Третє завдання-------------------------------------
 
 def normalize_phone(phone_number):
+    #Создание паттерна доля нахождения всех симвалов кроме цифа и знака +
     pattern = r"[^\d\+]"
     replacement  = ""
+    #Замена всех неподходящих симвалов ничем
     phone_number = re.sub(pattern, replacement, phone_number)
-
+    #Создание паттерна для поиска +38 в строке, которая получилась после первого преобразования
     pattern = r"\+38"
     match = re.search(pattern, phone_number)
+    #если эти символы не найдены, то match вернет None
     if match == None:
+        #Создание паттерна для поиска 38 в строке
         pattern = r"38"
         match = re.search(pattern, phone_number)
         if match:
+            #Если найдены то ставим + в перед номера
             phone_number = "+" + phone_number
         else:
+            #Если не найдены то ставим +38 в перед номера
             phone_number = "+38" + phone_number
     return phone_number
 # Тестовые запуски
