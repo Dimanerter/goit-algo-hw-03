@@ -52,7 +52,6 @@ lottery_numbers = get_numbers_ticket(1, 49, 6)
 print("Ваші лотерейні числа:", lottery_numbers)
 # print(get_numbers_ticket(10, 15, 9))
 # print(get_numbers_ticket(10, 4, 2))
-# print(get_numbers_ticket(10, 4, 2))
 # print(get_numbers_ticket(-1, 10000, 6))
 # print(get_numbers_ticket(90, 100, 6))
 
